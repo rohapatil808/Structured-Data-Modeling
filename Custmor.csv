@@ -1,0 +1,21 @@
+CustomerID,FirstName,LastName,DOB,Gender,Address,City,PhoneNumber,Email
+c001,Olivia,Combs,15-04-1944,Male,5289 Wellington Street,Auckland,+64 9-222 3549,ogonzalez@campos.com
+c002,Jeffrey,Zimmerman,22-06-1957,Male,USNS Johnson,Wellington,+64 4-863 5554,maynardshelly@thomas.net
+c003,Jose,Shaw,15-02-1987,Male,217 Queen Street,Hamilton,+64 7-071 1903,qramos@gmail.com
+c004,Justin,Reynolds,03-07-1957,Male,Unit 3317 Box 0969,Auckland,+64 9-404 8842,psteele@gmail.com
+c005,Charles,Aguilar,01-01-1974,Female,68149 North Shore Road,Wellington,+64 4-675 3228,zwells@yahoo.com
+c006,Fernando,Allen,06-01-1978,Female,86566 Lake Road,Christchurch,+64 3-307 7733,spencernatalie@myers-hernandez.org
+c007,Patricia,Russell,18-04-1956,Male,USS Brown,Wellington,+64 4-460 7367,hardindillon@gibson.com
+c008,Austin,Ferguson,30-08-2002,Female,2123 South Road,Dunedin,+64 3-133 0040,josephshort@wilson-ingram.biz
+c009,Jerome,Hernandez,15-04-1963,Male,4151 North Road,Wellington,+64 4-327 3327,cortezmaria@gmail.com
+c010,Steven,Morales,16-02-2002,Female,967 Eastern Avenue,Auckland,+64 9-253 9330,opratt@harrison.com
+c011,Jon,Howard,29-01-1944,Female,653 Merritt Street,Christchurch,+64 3-007 3068,ksnyder@harris.com
+c012,Jeffrey,Carrillo,29-05-1981,Male,30007 Lake Road,Hamilton,+64 7-883 2663,brandy69@cox.info
+c013,Melissa,Miller,22-10-1969,Male,9230 South Street,Dunedin,+64 3-033 8848,crystal08@gmail.com
+c014,Rebecca,Hoffman,25-06-1972,Female,034 North Street,Wellington,+64 4-096 3011,jenniferlucas@reilly-allen.com
+c015,Joshua,Davis,01-02-1988,Male,822 Western Road,Christchurch,+64 3-985 9608,wilsonpenny@wilson.com
+c016,Juan,Webb,16-06-1944,Female,17892 Southern Avenue,Wellington,+64 4-559 7573,susan18@reed-williams.com
+c017,Douglas,Dickerson,11-01-1999,Female,4981 Eastern Road,Auckland,+64 9-189 6384,keith66@yahoo.com
+c018,Sean,Krueger,11-11-1960,Male,Unit 6868 Box 9950,Auckland,+64 9-331 9226,gsantiago@clark-horne.com
+c019,Jason,Allen,20-09-1994,Male,3967 Southern Station,Wellington,+64 4-535 4276,robert98@blevins.com
+c020,Amy,Thompson,20-07-1985,Female,6741 Eastern Cliff,Hamilton,+64 7-263 8091,kristensmith@gmail.com
