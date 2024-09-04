@@ -1,0 +1,75 @@
+-- Create Customers Table
+CREATE TABLE Customers (
+    CustomerID NUMBER PRIMARY KEY,
+    FirstName VARCHAR2(50),
+    LastName VARCHAR2(50),
+    DOB DATE,
+    Gender VARCHAR2(10),
+    Address VARCHAR2(100),
+    City VARCHAR2(50),
+    PhoneNumber VARCHAR2(20),
+    Email VARCHAR2(100)
+);
+
+-- Create Agents Table
+CREATE TABLE Agents (
+    AgentID NUMBER PRIMARY KEY,
+    FirstName VARCHAR2(50),
+    LastName VARCHAR2(50),
+    PhoneNumber VARCHAR2(20),
+    Email VARCHAR2(100)
+);
+
+-- Create PolicyTypes Table
+CREATE TABLE PolicyTypes (
+    PolicyTypeID VARCHAR2(10) PRIMARY KEY,
+    PolicyTypeName VARCHAR2(50),
+    Description CLOB
+);
+
+-- Create Policies Table
+CREATE TABLE Policies (
+    PolicyID VARCHAR2(10) PRIMARY KEY,
+    PolicyNumber VARCHAR2(10) NOT NULL,
+    CustomerID NUMBER NOT NULL,
+    PolicyTypeID VARCHAR2(10) NOT NULL,
+    StartDate DATE NOT NULL,
+    EndDate DATE NOT NULL,
+    PremiumAmount NUMBER(10, 2) NOT NULL,
+    AgentID NUMBER NOT NULL,
+    CONSTRAINT fk_customer
+        FOREIGN KEY (CustomerID) 
+        REFERENCES Customers(CustomerID),
+    CONSTRAINT fk_policy_type
+        FOREIGN KEY (PolicyTypeID) 
+        REFERENCES PolicyTypes(PolicyTypeID),
+    CONSTRAINT fk_agent
+        FOREIGN KEY (AgentID) 
+        REFERENCES Agents(AgentID)
+);
+
+-- Create Payments Table
+CREATE TABLE Payments (
+    PaymentID NUMBER PRIMARY KEY,
+    PolicyID VARCHAR2(10) NOT NULL,
+    PaymentDate DATE,
+    PaymentAmount NUMBER(10, 2),
+    PaymentMethod VARCHAR2(50),
+    CONSTRAINT fk_policy
+        FOREIGN KEY (PolicyID) 
+        REFERENCES Policies(PolicyID)
+);
+
+-- Create Claims Table
+CREATE TABLE Claims (
+    ClaimID NUMBER PRIMARY KEY,
+    PolicyID VARCHAR2(10) NOT NULL,
+    ClaimSubmissionDate DATE,
+    ApprovalDate DATE,
+    ClaimAmount NUMBER(10, 2),
+    Status VARCHAR2(20),
+    ProcessingTime NUMBER,
+    CONSTRAINT fk_policy
+        FOREIGN KEY (PolicyID) 
+        REFERENCES Policies(PolicyID)
+);

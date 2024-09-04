@@ -1,0 +1,54 @@
+Table Customers {
+  CustomerID int [pk]
+  FirstName varchar(50)
+  LastName varchar(50)
+  DOB date
+  Gender varchar(10)
+  Address varchar(100)
+  City varchar(50)
+  PhoneNumber varchar(20)
+  Email varchar(100)
+}
+
+Table Agents {
+  AgentID int [pk]
+  FirstName varchar(50)
+  LastName varchar(50)
+  PhoneNumber varchar(20)
+  Email varchar(100)
+}
+
+Table PolicyTypes {
+  PolicyTypeID varchar(10) [pk]
+  PolicyTypeName varchar(50)
+  Description text
+}
+
+Table Policies {
+  PolicyID varchar(10) [pk]
+  PolicyNumber varchar(10)
+  CustomerID int [ref: > Customers.CustomerID]
+  PolicyTypeID varchar(10) [ref: > PolicyTypes.PolicyTypeID]
+  StartDate date
+  EndDate date
+  PremiumAmount decimal(10,2)
+  AgentID int [ref: > Agents.AgentID]
+}
+
+Table Payments {
+  PaymentID int [pk]
+  PolicyID varchar(10) [ref: > Policies.PolicyID]
+  PaymentDate date
+  PaymentAmount decimal(10,2)
+  PaymentMethod varchar(50)
+}
+
+Table Claims {
+  ClaimID int [pk]
+  PolicyID varchar(10) [ref: > Policies.PolicyID]
+  ClaimSubmissionDate date
+  ApprovalDate date
+  ClaimAmount decimal(10,2)
+  Status varchar(20)
+  ProcessingTime int
+}
