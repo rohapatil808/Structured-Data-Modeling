@@ -1,0 +1,22 @@
+INSERT INTO Payments (PaymentID, PolicyID, PaymentDate, PaymentAmount, PaymentMethod)
+VALUES
+(1, 'p001', '2023-11-04', 8056, 'Credit Card'),
+(2, 'p002', '2024-03-30', 4633, 'Debit Card'),
+(3, 'p003', '2023-10-25', 8050, 'Credit Card'),
+(4, 'p004', '2023-12-05', 5485, 'Debit Card'),
+(5, 'p005', '2022-09-14', 2269, 'Bank Transfer'),
+(6, 'p006', '2024-05-02', 4202, 'Bank Transfer'),
+(7, 'p007', '2022-10-03', 7870, 'Debit Card'),
+(8, 'p008', '2023-05-12', 9191, 'Debit Card'),
+(9, 'p009', '2022-12-10', 6242, 'Credit Card'),
+(10, 'p010', '2023-12-29', 8957, 'Credit Card'),
+(11, 'p011', '2022-12-31', 3041, 'Debit Card'),
+(12, 'p012', '2024-07-13', 3089, 'Debit Card'),
+(13, 'p013', '2023-03-06', 5239, 'Cash Out'),
+(14, 'p014', '2024-07-24', 5510, 'Debit Card'),
+(15, 'p015', '2023-01-14', 9465, 'Credit Card'),
+(16, 'p016', '2022-10-30', 6911, 'Credit Card'),
+(17, 'p017', '2024-03-08', 7393, 'Debit Card'),
+(18, 'p018', '2022-10-21', 1645, 'Credit Card'),
+(19, 'p019', '2023-03-14', 7559, 'Bank Transfer'),
+(20, 'p020', '2023-07-25', 1879, 'Credit Card');

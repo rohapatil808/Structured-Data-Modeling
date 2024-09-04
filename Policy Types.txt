@@ -1,0 +1,6 @@
+INSERT INTO PolicyTypes (PolicyTypeID, PolicyTypeName, Description)
+VALUES
+('pt1', 'Health', 'Health insurance policy'),
+('pt2', 'Life', 'Life insurance policy'),
+('pt3', 'Travel', 'Travel insurance policy'),
+('pt4', 'Pet', 'Pet insurance policy');

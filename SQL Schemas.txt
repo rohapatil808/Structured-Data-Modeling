@@ -1,0 +1,63 @@
+--Agent table
+CREATE TABLE Agents (
+    AgentID INT PRIMARY KEY,
+    FirstName VARCHAR(50),
+    LastName VARCHAR(50),
+    PhoneNumber VARCHAR(20),
+    Email VARCHAR(100)
+);
+--claims table
+CREATE TABLE Claims (
+    ClaimID INT PRIMARY KEY,
+    PolicyID INT,
+    ClaimSubmissionDate DATE,
+    ApprovalDate DATE,
+    ClaimAmount DECIMAL(10, 2),
+    Status VARCHAR(20),
+    ProcessingTime INT,
+    FOREIGN KEY (PolicyID) REFERENCES Policies (PolicyID)
+);
+--customer table
+CREATE TABLE Customers (
+    CustomerID INT PRIMARY KEY,
+    FirstName VARCHAR(50),
+    LastName VARCHAR(50),
+    DOB DATE,
+    Gender VARCHAR(10),
+    Address VARCHAR(100),
+    City VARCHAR(50),
+    PhoneNumber VARCHAR(20),
+    Email VARCHAR(100)
+);
+--payments table
+CREATE TABLE Payments (
+    PaymentID INT PRIMARY KEY,
+    PolicyID INT,
+    PaymentDate DATE,
+    PaymentAmount DECIMAL(10, 2),
+    PaymentMethod VARCHAR(50),
+    FOREIGN KEY (PolicyID) REFERENCES Policies (PolicyID)
+);
+--policies
+CREATE TABLE Policies (
+    PolicyID VARCHAR(10) PRIMARY KEY,
+    PolicyNumber VARCHAR(10) NOT NULL,
+    CustomerID INT NOT NULL,
+    PolicyTypeID INT NOT NULL,
+    StartDate DATE NOT NULL,
+    EndDate DATE NOT NULL,
+    PremiumAmount DECIMAL(10, 2) NOT NULL,
+    AgentID INT NOT NULL,
+    FOREIGN KEY (CustomerID) REFERENCES Customers(CustomerID),
+    FOREIGN KEY (PolicyTypeID) REFERENCES PolicyTypes(PolicyTypeID),
+    FOREIGN KEY (AgentID) REFERENCES Agents(AgentID)
+);
+--policy type
+CREATE TABLE PolicyTypes (
+    PolicyTypeID VARCHAR(10) PRIMARY KEY,
+    PolicyTypeName VARCHAR(50) NOT NULL,
+    Description TEXT
+);
+
+
+
